@@ -11,7 +11,7 @@
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" name="Password" id="Password">
+            <input type="password" name="password" id="password">
             {% if errors.first('password') %} {{ errors.first('password')}} {% endif %}
         </div>
         <div>

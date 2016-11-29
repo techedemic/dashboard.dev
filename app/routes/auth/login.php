@@ -30,6 +30,7 @@ $app->post('/login', function() use ($app) {
         die('error');
 
     }
+
     $app->render('auth/login.php',[
         'errors' => $v->errors(),
         'request' => $request
