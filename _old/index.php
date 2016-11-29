@@ -7,10 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>DASHBOARD.DEV</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="resources/css/dashboard.css" rel="stylesheet">
     <link rel="icon" href="resources/images/favicon.png">
-    <script type="text/javascript" src="resources/javascript/main.js"></script>
   </head>
   <body>
       <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -22,7 +22,7 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a href="#" class="navbar-left"><img style="margin-top: 13px;" width="24px" height="24px" src="resources/images/favicon.png"></a>
+           <a href="#" class="navbar-left"><img class="navbar-logo" src="resources/images/favicon.png"></a>
            <a class="navbar-brand" href="#">DASHBOARD.DEV</a>
          </div>
          <div id="navbar" class="navbar-collapse collapse">
@@ -51,22 +51,22 @@
 
            <div class="row placeholders">
              <div class="col-xs-6 col-sm-3 placeholder">
-               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="100" height="100" class="img-responsive" alt="Generic placeholder thumbnail">
+               <canvas id="chart_1" width="400" height="400"></canvas>
                <h4>Dashboard 1</h4>
                <span class="text-muted">Something else</span>
              </div>
              <div class="col-xs-6 col-sm-3 placeholder">
-               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="100" height="100" class="img-responsive" alt="Generic placeholder thumbnail">
+               <canvas id="chart_2" width="400" height="400"></canvas>
                <h4>Dashboard 2</h4>
                <span class="text-muted">Something else</span>
              </div>
              <div class="col-xs-6 col-sm-3 placeholder">
-               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="100" height="100" class="img-responsive" alt="Generic placeholder thumbnail">
+               <canvas id="chart_3" width="400" height="400"></canvas>
                <h4>Dashboard 3</h4>
                <span class="text-muted">Something else</span>
              </div>
              <div class="col-xs-6 col-sm-3 placeholder">
-               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="100" height="100" class="img-responsive" alt="Generic placeholder thumbnail">
+               <canvas id="chart_4" width="400" height="400"></canvas>
                <h4>Dashboard 4</h4>
                <span class="text-muted">Something else</span>
              </div>
@@ -96,5 +96,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="resources/javascript/main.js"></script>
+    <script type="text/javascript" src="resources/javascript/chart.js"></script>
   </body>
 </html>

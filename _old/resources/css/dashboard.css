@@ -10,8 +10,15 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
-  color: #232323;
-  background-color: #010108;
+  background-color: #d1d1d1;
+}
+
+h4{
+    color: #000000;
+}
+
+.text-muted{
+    color: #333333;
 }
 
 
@@ -37,12 +44,20 @@ body {
   border: 0;
 }
 
-.navbar-brand a{
-    color: #FFFFFF !important;    
+.navbar-brand{
+    color: #FFFFFF !important;
+
 }
 
 .navbar-left{
     padding-right: 10px;
+}
+
+.navbar-logo{
+    margin-top: 13px;
+    width:24px;
+    height:24px;
+
 }
 
 /*
@@ -114,7 +129,7 @@ body {
 }
 .main .page-header {
   margin-top: 0;
-  color: #00B9AD;
+  color: #333333;
   font-size: 16pt;
 }
 
