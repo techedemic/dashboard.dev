@@ -2,9 +2,16 @@
  * Base structure
  */
 
+:root{
+    --background-color:       #0D0B24;
+    --background-color-content: darken(--background-color, 15%);
+}
+
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  color: #232323;
+  background-color: #010108;
 }
 
 
@@ -14,15 +21,28 @@ body {
 
 .sub-header {
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000000;
 }
 
 /*
  * Top navigation
  * Hide default border to remove 1px line.
  */
+.navbar{
+
+    background-color: #0D0B24;
+}
+
 .navbar-fixed-top {
   border: 0;
+}
+
+.navbar-brand a{
+    color: #FFFFFF !important;    
+}
+
+.navbar-left{
+    padding-right: 10px;
 }
 
 /*
@@ -44,8 +64,8 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #666666;
-    border-right: 1px solid #eee;
+    background-color: #0D0B24;
+    border-right: 1px solid #000;
   }
 }
 
@@ -58,12 +78,23 @@ body {
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
+  color: #ffffff;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
+
+.nav-sidebar > li > a:hover {
+        background-color: #050414;
+}
+
+
+.nav-sidebar > .active > a{
+  background-color: #292649;
+}
+.nav-sidebar > .active > a:hover
+{
+  background-color: #292649 !important;
+}
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+
 }
 
 
@@ -73,6 +104,7 @@ body {
 
 .main {
   padding: 20px;
+
 }
 @media (min-width: 768px) {
   .main {
@@ -82,8 +114,13 @@ body {
 }
 .main .page-header {
   margin-top: 0;
+  color: #00B9AD;
+  font-size: 16pt;
 }
 
+/*
+*
+*/
 
 /*
  * Placeholder dashboard ideas
