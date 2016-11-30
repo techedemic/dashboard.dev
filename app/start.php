@@ -14,6 +14,7 @@ use Dashboard\Validation\Validator;
 
 
 use Dashboard\Middleware\BeforeMiddleware;
+use Dashboard\Middleware\CsrfMiddleware;
 
 session_cache_limiter(false);
 session_start();
@@ -31,6 +32,7 @@ $app = new Slim([
 ]);
 
 $app->add(new BeforeMiddleware);
+$app->add(new CsrfMiddleware);
 
 $app->configureMode($app->config('mode'), function() use ($app){
     $app->config = Config::Load(INC_ROOT . "/app/config/{$app->mode}.php");
