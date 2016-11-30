@@ -25,9 +25,13 @@ $app->post('/login', function() use ($app) {
                     ->first();
         if ($user && $app->hash->passwordCheck($password, $user->password))
         {
-            die('fine');
+            $_SESSION[$app->config->get('auth.session')] = $user->id;
+            $app->flash('global', 'You are now signed in');
+        } else {
+            $app->flash('global', 'Could not log you in');
         }
-        die('error');
+        $app->response->redirect($app->urlFor('login'));
+
 
     }
 

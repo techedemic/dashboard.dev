@@ -26,7 +26,7 @@ return[
             'smtp_secure' => 'tls',
             'host' => 'smtp.gmail.com',
             'username' => 'hendrisch@gmail.com',
-            'password' => 'h3nDr1sCh03',
+            'password' => '-sa---saafsd7dv',
             'port' => 587,
             'html' => true
         ],
