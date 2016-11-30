@@ -14,13 +14,14 @@
             <input type="password" name="password" id="password">
             {% if errors.first('password') %} {{ errors.first('password')}} {% endif %}
         </div>
-        <div>            
+        <div>
             <input type="checkbox" name="remember" id="remember">
             <label for="remember">Remember me</label>
         </div>
         <div>
             <input type="submit" value="Login">
         </div>
+        <a href="{{ urlFor('auth.password.recover')}}">Forgot password</a>
         <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
     </form>
 {% endblock %}
