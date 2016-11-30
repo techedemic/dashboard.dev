@@ -24,9 +24,9 @@ return[
         'mail' => [
             'smtp_auth' => true,
             'smtp_secure' => 'tls',
-            'host' => 'smtp.gmail.com',
-            'username' => 'hendrisch@gmail.com',
-            'password' => '-sa---saafsd7dv',
+            'host' => 'mail.bynes.co.za',
+            'username' => 'admin@synththis.com',
+            'password' => 'client_pass',
             'port' => 587,
             'html' => true
         ],
