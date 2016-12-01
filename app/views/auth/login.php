@@ -22,11 +22,13 @@
           <label>
             <input type="checkbox" name="remember" id="remember"> Remember me
           </label>
-          <a class="pull-right" href="{{ urlFor('auth.password.recover')}}">Forgot password</a>
+          <div class="pull-right">
+              <a  href="{{ urlFor('register')}}">Register</a> | <a href="{{ urlFor('auth.password.recover')}}">Forgot password</a>
+          </div>
         </div>
         <div class="btn-group btn-group-justified">
             <div class="btn-group"> <button class="btn btn-sm btn-primary btn-block btn-submit" type="submit">Sign in</button></div>
-            <div class="btn-group"><a class="btn btn-sm btn-success btn-block btn-submit" role="button" aria-expanded="false" href="{{ urlFor('register')}}">Register</a></div>
+            <!--<div class="btn-group"><a class="btn btn-sm btn-success btn-block btn-submit" role="button" aria-expanded="false" href="{{ urlFor('register')}}">Register</a></div>-->
         </div>
         <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
       </form>
