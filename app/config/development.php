@@ -9,10 +9,10 @@ return[
         ],
         'db' => [
             'driver' => 'mysql',
-            'host' => '127.0.0.1',
+            'host' => 'localhost',
             'name' => 'dashboard',
             'username' => 'dbuser',
-            'password' => 'dbpass',
+            'password' => 'dbpassword',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => ''
@@ -24,14 +24,14 @@ return[
         'mail' => [
             'smtp_auth' => true,
             'smtp_secure' => 'tls',
-            'host' => 'smtp.gmail.com',
-            'username' => 'hendrisch@gmail.com',
-            'password' => 'blabla',
+            'host' => 'mail.bynes.co.za',
+            'username' => 'admin@synththis.com',
+            'password' => 'client_pass',
             'port' => 587,
             'html' => true
         ],
         'twig' => [
-            'debug' => false
+            'debug' => true
         ],
         'csrf' => [
             'key' => 'csrf_token'

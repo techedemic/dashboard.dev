@@ -1,9 +1,12 @@
 <?php
-$app->get('/register', function() use($app){
+
+use Dashboard\User\UserPermission;
+
+$app->get('/register', $guest(),  function() use($app){
     $app->render('auth/register.php');
 })->name('register');
 
-$app->post('/register', function() use($app){
+$app->post('/register', $guest(),  function() use($app){
     $request = $app->request;
     $email = $request->post('email');
     $username = $request->post('username');
@@ -19,21 +22,31 @@ $app->post('/register', function() use($app){
     ]);
 
     if($v->passes()){
-        $app->user->create([
+        $identifier = $app->randomlib->generateString(128);
+
+        $user = $app->user->create([
             'email' => $email,
             'username' => $username,
-            'password' => $app->hash->password($password)
+            'password' => $app->hash->password($password),
+            'active' => false,
+            'active_hash' => $app->hash->hash($identifier)
         ]);
-        $app->flash('global', 'You have been registered');
+
+        $user->permissions()->create(UserPermission::$defaults);
+
+        $app->mail->send('email/auth/registered.php', ['user' => $user, 'identifier' => $identifier], function($message) use ($user){
+            $message->to($user->email);
+            $message->subject("Thanks for registering");
+        });
+
+
+        $app->flash('global', "You have been registered");
         $app->response->redirect($app->urlFor('home'));
     }
     $app->render('auth/register.php', [
         'errors' => $v->errors(),
         'request' => $request
     ]);
-
-
-
 
 })->name('register.post');
 
