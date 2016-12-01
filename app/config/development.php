@@ -1,7 +1,7 @@
 <?php
 return[
         'app' => [
-            'url' => 'http://dashboard.dev',
+            'url' => 'http://10.0.6.26/dashboard.dev',
             'hash' => [
                 'algo' => PASSWORD_BCRYPT,
                 'cost' => 10

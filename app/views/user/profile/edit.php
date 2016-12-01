@@ -3,6 +3,7 @@
 {% block title %} Edit Profile {% endblock %}
 
 {% block content %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <form action="{{ urlFor('user.profile.edit.post')}}" method="post" autocomplete="off">
         <div>
             <label for="email">Username/Email</label>
@@ -22,7 +23,6 @@
         <div>
             <input type="submit" value="Update Details">
         </div>
-        <a href="{{ urlFor('auth.password.recover')}}">Forgot password</a>
         <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
     </form>
 {% endblock %}

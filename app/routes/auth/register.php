@@ -40,7 +40,7 @@ $app->post('/register', $guest(),  function() use($app){
         });
 
 
-        $app->flash('global', "You have been registered");
+        $app->flash('global', "You have been registered successfully. Please check your email for additional instructions.");
         return $app->response->redirect($app->urlFor('home'));
     }
     $app->render('auth/register.php', [

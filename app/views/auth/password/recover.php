@@ -1,19 +1,23 @@
 {% extends 'templates/default.php' %}
 
+{% block resources %}
+<link href="{{ resourcesUrl }}/css/userform.css" rel="stylesheet">
+{% endblock %}
+
 {% block title %} Recover Password {% endblock %}
 
 {% block content %}
-    <form action="{{ urlFor('auth.password.recover.post')}}" method="post" autocomplete="off">
-        <p>Enter your email address to start your password recovery</p>
-        <div>
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email"{% if request.post('email')%} value={{ request.post('email') }} {% endif %}>
-            {% if errors.has('email') %} {{ errors.first('email')}} {% endif %}
-        </div>
-        <div>
-            <input type="submit" value="Request password reset">
-        </div>
-        <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
-    </form>
 
+
+    <form class="form-signin" action="{{ urlFor('auth.password.recover.post')}}" method="post" autocomplete="false">
+      <h3 class="form-signin-heading">Enter your new password</h3>
+      <label for="email">Password</label>
+      <input type="text" id="email" name="email" placeholder="Email address" class="form-control"autofocus>
+      {% if errors.first('email') %} {{ errors.first('email')}} {% endif %}
+
+      <div class="btn-group btn-group-justified">
+          <div class="btn-group"> <button class="btn btn-sm btn-primary btn-block btn-submit" type="submit">Request Password Reset</button></div>
+      </div>
+      <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
+    </form>
 {% endblock %}
