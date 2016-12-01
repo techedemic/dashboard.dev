@@ -22,8 +22,19 @@ $app->post('/recover-password', $guest(), function() use ($app){
                 $app->flash('global','No matching email address found');
                 $app->response->redirect($app->urlFor('auth.password.recover'));
             } else {
-                //send email
-                //die('passed');
+
+                $identifier = $app->randomlib->generateString(128);
+                $user->update([
+                    'recover_hash' =>$app->hash->hash($identifier)
+                ]);
+
+                $app->mail->send('email/auth/password/recover.php', ["user" => $user, "identifier" => $identifier], function($message) use ($user){
+                    $message->to($user->email);
+                    $message->subject("Recover your password");
+                });
+
+                $app->flash('global',"Please check you email at {$email} for additional instructions");
+
                 $app->response->redirect($app->urlFor('home'));
             }
 
