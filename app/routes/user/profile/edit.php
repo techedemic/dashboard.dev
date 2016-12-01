@@ -28,7 +28,7 @@ $app->post('/user/edit',$authenticated(), function() use ($app){
             'last_name' => $lastName
         ]);
         $app->flash('global','Your details have been updated');
-        $app->response->redirect($app->urlFor('user.profile.edit'));
+        return $app->response->redirect($app->urlFor('user.profile.edit'));
     }
     $app->render('user/profile/edit.php', [
         'errors' => $v->errors(),

@@ -35,7 +35,7 @@ $app->post('/recover-password', $guest(), function() use ($app){
 
                 $app->flash('global',"Please check you email at {$email} for additional instructions");
 
-                $app->response->redirect($app->urlFor('home'));
+                return $app->response->redirect($app->urlFor('home'));
             }
 
         }

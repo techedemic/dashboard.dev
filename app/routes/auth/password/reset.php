@@ -12,18 +12,18 @@ $app->get('/password-reset', $guest(), function() use ($app){
 
         if(!$user){
             $app->flash('global', 'No recovery possible for this user. Please re-submit the Forgot Password request');
-            $app->response->redirect($app->urlFor('home'));
+            return $app->response->redirect($app->urlFor('home'));
         }
 
         if(!$user->recover_hash){
             $app->flash('global', 'Password Recovery was not requested for this user. Please re-submit the Forgot Password request');
-            $app->response->redirect($app->urlFor('home'));
+            return $app->response->redirect($app->urlFor('home'));
         }
 
         if(!$app->hash->hashCheck($user->recover_hash,$hashedIdentifier))
         {
             $app->flash('global', 'Invalid Password Reset request. Please re-submit the Forgot Password request');
-            $app->response->redirect($app->urlFor('home'));
+            return $app->response->redirect($app->urlFor('home'));
         }
 
         $app->render('auth/password/reset.php', [
@@ -47,18 +47,18 @@ $app->post('/password-reset', $guest(), function() use ($app){
 
     if(!$user){
         $app->flash('global', 'No recovery possible for this user. Please re-submit the Forgot Password request');
-        $app->response->redirect($app->urlFor('home'));
+        return $app->response->redirect($app->urlFor('home'));
     }
 
     if(!$user->recover_hash){
         $app->flash('global', 'Password Recovery was not requested for this user. Please re-submit the Forgot Password request');
-        $app->response->redirect($app->urlFor('home'));
+        return $app->response->redirect($app->urlFor('home'));
     }
 
     if(!$app->hash->hashCheck($user->recover_hash,$hashedIdentifier))
     {
         $app->flash('global', 'Invalid Password Reset request. Please re-submit the Forgot Password request');
-        $app->response->redirect($app->urlFor('home'));
+        return $app->response->redirect($app->urlFor('home'));
     }
 
     $v = $app->validation;
@@ -74,7 +74,7 @@ $app->post('/password-reset', $guest(), function() use ($app){
             'recover_hash' => null
         ]);
         $app->flash('global', 'Your password has been reset. Please sign in again');
-        $app->response->redirect($app->urlFor('home'));
+        return $app->response->redirect($app->urlFor('home'));
     }
 
     $app->render('auth/password/reset.php', [
