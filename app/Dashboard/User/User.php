@@ -16,6 +16,8 @@ class User extends Eloquent
         'recover_hash',
         'remember_identifier',
         'remember_token',
+        'first_name',
+        'last_name'
 
     ];
 
