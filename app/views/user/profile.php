@@ -3,7 +3,7 @@
 {% block title %} {{ user.getFullNameOrUsername() }} {% endblock %}
 
 {% block content %}
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
         <div class="well well-lg">
         <h3>User Profile</h3>
         <h2><i>{{ user.username }}</i></h2>

@@ -12,11 +12,20 @@
 
       <form class="form-signin" action="{{ urlFor('login.post')}}" method="post" autocomplete="false">
         <h3 class="form-signin-heading">Please sign in</h3>
-        <label for="identifier">Email address</label>
-        <input type="text" id="identifier" name="identifier" class="form-control" placeholder="Username or Email Address" required autofocus {% if request.post('identifier')%} value="{{ request.post('identifier')}}" {% endif %}>
-        {% if errors.first('identifier') %} {{ errors.first('identifier')}} {% endif %}
+        <label for="identifier">Email address or Username</label>
+        {% if errors.first('identifier') %}
+            <div class="alert alert-danger message" role="alert">
+              {{ errors.first('identifier')}}
+            </div>
+        {% endif %}
+        <input type="text" id="identifier" name="identifier" class="form-control" placeholder="Username or Email Address" autofocus {% if request.post('identifier')%} value="{{ request.post('identifier')}}" {% endif %}>
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        {% if errors.first('password') %}
+            <div class="alert alert-danger message" role="alert">
+              {{ errors.first('password')}}
+            </div>
+        {% endif %}
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password">
         {% if errors.first('password') %} {{ errors.first('password')}} {% endif %}
         <div class="checkbox">
           <label>

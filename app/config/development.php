@@ -1,7 +1,8 @@
 <?php
 return[
         'app' => [
-            'url' => 'http://10.0.6.26/dashboard.dev',
+            'url' => 'http://10.0.6.26',  /* No trailing slash ('/')*/
+            'subfolder' => "/dashboard.dev", /* in dev mode, the app might be in a subfolder of a general /var/www/html folder or similar. Remember the leading slash ('/')*/
             'hash' => [
                 'algo' => PASSWORD_BCRYPT,
                 'cost' => 10

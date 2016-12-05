@@ -8,7 +8,7 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
      </button>
-     <a href="#" class="navbar-left"><img class="navbar-logo" src="{{ baseUrl }}/public/resources/images/favicon.png"></a>
+     <a href="#" class="navbar-left"><img class="navbar-logo" src="{{ resourcesUrl }}/images/favicon.png"></a>
      <a class="navbar-brand" href="#">DASHBOARD.DEV</a>
    </div>
    <div id="navbar" class="navbar-collapse collapse">

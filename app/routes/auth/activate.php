@@ -12,7 +12,7 @@
                         ->first();
 
         if (!$user || !$app->hash->hashCheck($user->active_hash, $hashedIdentifier)){
-            $app->flash('global','There was a problem activating your account');
+            $app->flash('global',"Unable to activate your account OR Account already active. Please attempt to log in.");
             return $app->response->redirect($app->urlFor('home'));
         } else {
             $user->activateAccount();
