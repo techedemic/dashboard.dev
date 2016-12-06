@@ -88,7 +88,7 @@ $app->container->singleton('mail', function() use($app){
     $mailer->isHTML($app->config->get('mail.html')) ;
     $mailer->isSMTP();
 
-    return new Mailer($app->view, $mailer);
+    return new Mailer($app, $mailer);
 }
 );
 

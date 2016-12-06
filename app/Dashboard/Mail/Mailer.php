@@ -6,13 +6,14 @@ class Mailer
 {
     protected $view;
     protected $mailer;
+    protected $app;
 
 
-
-    public function __construct($view, $mailer)
+    public function __construct($app, $mailer)
     {
-        $this->view = $view;
+        $this->view = $app->view;
         $this->mailer = $mailer;
+        $this->app = $app;
     }
 
     public function send($template, $data, $callback)
@@ -28,11 +29,11 @@ class Mailer
 
         if(!$this->mailer->Send()) {
             $app->logger->error("Mail not sent",$this->mailer->ErrorInfo);
-            echo 'Message was not sent.';
-            echo 'Mailer error: ' . $this->mailer->ErrorInfo;
+            //echo 'Message was not sent.';
+            //echo 'Mailer error: ' . $this->mailer->ErrorInfo;
         } else {
             echo 'Message has been sent.';
-            $app->logger->debug("Mail has been sent");
+            //$app->logger->debug("Mail has been sent");
         }
 
         $this->mailer->send();
