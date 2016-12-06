@@ -8,7 +8,7 @@
         <title>Dashboard | {% block title %} {%endblock%} </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
         <!-- Custom styles for this template -->
         <link href="{{ resourcesUrl }}/css/dashboard.css" rel="stylesheet" type="text/css">
 
@@ -17,16 +17,19 @@
         {%endblock %}
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid main">
 
         {% include 'templates/partials/messages.php' %}
         {% include 'templates/partials/navigation.php' %}
         {%block content %}
         {%endblock %}
         </div>
+
+
+        {% include 'templates/partials/modal.php' %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript" src="{{ resourcesUrl }}/javascript/main.js"></script>
-        <!--<script type="text/javascript" src="{{ resourcesUrl }}/javascript/chart.js"></script>-->
+        <script type="text/javascript" src="{{ resourcesUrl }}/javascript/chart.js"></script>
     </body>
 </html>

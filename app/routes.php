@@ -14,6 +14,8 @@ require INC_ROOT . '/app/routes/user/profile.php';
 require INC_ROOT . '/app/routes/user/all.php';
 require INC_ROOT . '/app/routes/user/profile/edit.php';
 
+require INC_ROOT . '/app/routes/dashboard/viewer.php';
+
 require INC_ROOT . '/app/routes/admin/example.php';
 
 /*

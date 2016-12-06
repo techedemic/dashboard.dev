@@ -1,0 +1,38 @@
+{
+    "data":[{
+        "title" : "Monitored",
+        "icon" : "fa-dashboard",
+        "color" : "primary",
+        "group_by" : "region",
+        "sum" : "monitored",
+        "datasource" : "data.json"
+    },{
+        "title" : "Site Down",
+        "icon" : "fa-upload fa-rotate-180",
+        "color" : "yellow",
+        "group_by" : "region",
+        "sum" : "down_slan",
+        "datasource" : "data.json"
+    },{
+        "title" : "Primary WAN Down",
+        "icon" : "fa-upload fa-rotate-180",
+        "color" : "yellow",
+        "group_by" : "region",
+        "sum" : "down_swan",
+        "datasource" : "data.json"
+    },{
+        "title" : "Backup Link Active",
+        "icon" : "fa-code-fork",
+        "color" : "green",
+        "group_by" : "region",
+        "sum" : "up_bwan",
+        "datasource" : "data.json"
+    },{
+        "title" : "Backup Link Down",
+        "icon" : "fa-code-fork",
+        "color" : "green",
+        "group_by" : "region",
+        "sum" : "down_bwan",
+        "datasource" : "data.json"
+    }]
+}

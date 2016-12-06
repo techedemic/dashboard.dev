@@ -35,18 +35,7 @@
        <li><a href="{{ urlFor('login') }}">Login</a></li>
        {% endif %}
        <li><a href="#" onclick="showNotImplemented();">Help</a></li>
-
      </ul>
    </div>
-   {% if auth %}
-   <div class="col-sm-3 col-md-2 sidebar">
-     <ul class="nav nav-sidebar">
-       <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-       <li><a href="#">Reports</a></li>
-       <li><a href="#">Analytics</a></li>
-       <li><a href="#">Export</a></li>
-     </ul>
-   </div>
-   {% endif %}
  </div>
 </nav>

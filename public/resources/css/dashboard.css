@@ -64,80 +64,6 @@ h4{
  * Sidebar
  */
 
-/* Hide for mobile, show later */
-.sidebar {
-  display: none;
-}
-@media (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #0D0B24;
-    border-right: 1px solid #000;
-  }
-}
-
-@media (max-width: 767px) {
-  .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #0D0B24;
-    border-right: 1px solid #000;
-  }
-}
-
-
-
-/* Sidebar navigation */
-.nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
-}
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
-  color: #ffffff;
-}
-
-.nav-sidebar > li > a:hover {
-        background-color: #050414;
-}
-
-
-.nav-sidebar > li > a:focus {
-  background-color: #0c98a1 !important;
-}
-
-/*.nav-sidebar > .active > a:focus {
-  background-color: #84db36 !important;
-}*/
-
-.nav-sidebar > .active > a{
-  background-color: #292649;
-}
-.nav-sidebar > .active > a:hover
-{
-  background-color: #292649 !important;
-}
-
-.nav-sidebar > .active > a:active:focus {
-    /*background-color: #84db36 !important;*/
-}
 
 
 /*
@@ -191,15 +117,18 @@ h4{
   margin: 0 auto;
 }
 
-.text-huge{
-    font-size: 26pt;
-}
+
 
 
 
 /*
 * Panels
 */
+
+.text-huge{
+    font-size: 26pt;
+    font-weight: bold;
+}
 
 .panel-green {
   border-color: #5cb85c !important;
