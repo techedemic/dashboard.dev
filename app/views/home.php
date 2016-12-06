@@ -1,6 +1,8 @@
 {% extends 'templates/default.php' %}
 
 {% block title %} Home {% endblock %}
+{% block helptitle %} Home {% endblock %}
+{% block helpcontent %} This is the help for the home page {% endblock %}
 
 {% block content %}
 
@@ -97,7 +99,5 @@
       </div>-->
 
 
-<!-- Modal -->
-   
 
 {% endblock %}

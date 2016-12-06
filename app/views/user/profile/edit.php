@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block title %} Edit Profile {% endblock %}
+{% block helptitle %} Edit Profile {% endblock %}
+{% block helpcontent %} Edit Profile Help page {% endblock %}
 
 {% block content %}
 

@@ -13,6 +13,10 @@
         <link href="{{ resourcesUrl }}/css/dashboard.css" rel="stylesheet" type="text/css">
 
         <link rel="icon" href="{{ resourcesUrl }}/images/favicon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{{ resourcesUrl }}/javascript/main.js"></script>
+
         {%block resources %}
         {%endblock %}
     </head>
@@ -26,10 +30,24 @@
         </div>
 
 
-        {% include 'templates/partials/modal.php' %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="{{ resourcesUrl }}/javascript/main.js"></script>
-        <script type="text/javascript" src="{{ resourcesUrl }}/javascript/chart.js"></script>
+
+        <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="modelInfoLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modelInfoLabel">Help | {% block helptitle %}{% endblock %}</h4>
+              </div>
+              <div class="modal-body">
+                {% block helpcontent %}
+                {% endblock %}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<script type="text/javascript" src="{{ resourcesUrl }}/javascript/chart.js"></script>-->
     </body>
 </html>

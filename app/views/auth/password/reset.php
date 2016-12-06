@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block title %} Reset Password {% endblock %}
-
+{% block helptitle %} Reset Password {% endblock %}
+{% block helpcontent %} Reset Password help window {% endblock %}
 {% block content %}
 
 

@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block title %} Login {% endblock %}
-
+{% block helptitle %} Login {% endblock %}
+{% block helpcontent %} Login help window {% endblock %}
 {% block content %}
 
 

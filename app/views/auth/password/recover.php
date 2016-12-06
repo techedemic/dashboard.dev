@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block title %} Recover Password {% endblock %}
-
+{% block helptitle %} Recover Password {% endblock %}
+{% block helpcontent %} Recover Password help window {% endblock %}
 {% block content %}
 
 
@@ -17,7 +18,7 @@
             {{ errors.first('email')}}
           </div>
       {% endif %}
-      <input type="text" id="email" name="email" placeholder="Email address" class="form-control"autofocus>      
+      <input type="text" id="email" name="email" placeholder="Email address" class="form-control"autofocus>
 
       <div class="btn-group btn-group-justified">
           <div class="btn-group"> <button class="btn btn-sm btn-primary btn-block btn-submit" type="submit">Request Password Reset</button></div>

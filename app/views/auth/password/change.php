@@ -4,7 +4,9 @@
 <link href="{{ resourcesUrl }}/css/userform.css" rel="stylesheet">
 {% endblock %}
 
-{% block title %} Change password {% endblock %}
+{% block title %} Change Password {% endblock %}
+{% block helptitle %} Change Password {% endblock %}
+{% block helpcontent %} Here you can change your password {% endblock %}
 
 {% block content %}
 <form class="form-signin" action="{{ urlFor('auth.password.change.post') }}" method="post" autocomplete="false">

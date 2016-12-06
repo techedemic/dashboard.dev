@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block title %} Register {% endblock %}
-
+{% block helptitle %} Register {% endblock %}
+{% block helpcontent %} Register help window {% endblock %}
 {% block content %}
 
 

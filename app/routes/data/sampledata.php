@@ -48,5 +48,5 @@ $app->get('/data/counter', function() use($app){
     //$result = JmesPath\search("to_array(sum(data[*].to_number({$sum})))", $data);
     //echo json_encode($result);
 
-})->name('data.counter.post');
+})->name('data.viewer');
  ?>

@@ -1,10 +1,18 @@
 {% extends 'templates/default.php' %}
 
-{% block title %} Home {% endblock %}
+{% block resources %}
+<script src="{{ resourcesUrl }}javascript/dashboard.js" type="text/javascript"></script>
+{% endblock %}
+
+
+{% block title %} Dashboard {% endblock %}
+{% block helptitle %} Dashboard {% endblock %}
+{% block helpcontent %} Dashboard help window {% endblock %}
 
 {% block content %}
 
-Dashboard Viewer
+    <div id="graph_container">
 
+    </div>
 
 {% endblock %}

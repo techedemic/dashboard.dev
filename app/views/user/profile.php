@@ -1,7 +1,8 @@
 {% extends 'templates/default.php' %}
 
 {% block title %} {{ user.getFullNameOrUsername() }} {% endblock %}
-
+{% block helptitle %} Profile View {% endblock %}
+{% block helpcontent %} Profile View Help page {% endblock %}
 {% block content %}
     <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
         <div class="well well-lg">

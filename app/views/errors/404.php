@@ -1,6 +1,8 @@
 {% extends 'templates/default.php' %}
 
 {% block title %} Error: 404 {% endblock %}
+{% block helptitle %} Error {% endblock %}
+{% block helpcontent %} This is a 404 page. You don't belong here. Go back! {% endblock %}
 
 {% block content %}
 <div class="well well-lg">
