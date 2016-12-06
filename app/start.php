@@ -6,6 +6,7 @@ use Slim\Views\TwigExtension;
 
 use Noodlehaus\Config;
 use RandomLib\Factory as RandomLib;
+use JmesPath;
 
 use Dashboard\User\User;
 use Dashboard\Mail\Mailer;

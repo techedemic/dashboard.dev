@@ -16,6 +16,12 @@ require INC_ROOT . '/app/routes/user/profile/edit.php';
 
 require INC_ROOT . '/app/routes/admin/example.php';
 
+/*
+Testing area
+*/
+require INC_ROOT . '/app/routes/data/sampledata.php';
+
+
 
 /*
     Custom Error pages
