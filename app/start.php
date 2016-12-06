@@ -46,6 +46,15 @@ require 'routes.php';
 
 $app->auth = false;
 
+
+// Set up global LOGGER
+$app->container->set('logger', function($c){
+    $logger = new \Monolog\Logger('my_logger');
+    $file_handler = new \Monolog\Handler\StreamHandler("../logs/app.log");
+    $logger->pushHandler($file_handler);
+    return $logger;
+});
+
 $app->container->set('user', function(){
     return new User;
 });
@@ -97,5 +106,7 @@ $view->parserOptions = [
 $view->parserExtensions = [
     new TwigExtension
 ];
+
+
 
  ?>

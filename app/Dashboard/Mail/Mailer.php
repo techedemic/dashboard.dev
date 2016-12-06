@@ -8,6 +8,7 @@ class Mailer
     protected $mailer;
 
 
+
     public function __construct($view, $mailer)
     {
         $this->view = $view;
@@ -24,6 +25,15 @@ class Mailer
         $message->body($this->view->render($template));
 
         call_user_func($callback, $message);
+
+        if(!$this->mailer->Send()) {
+            $app->logger->error("Mail not sent",$this->mailer->ErrorInfo);
+            echo 'Message was not sent.';
+            echo 'Mailer error: ' . $this->mailer->ErrorInfo;
+        } else {
+            echo 'Message has been sent.';
+            $app->logger->debug("Mail has been sent");
+        }
 
         $this->mailer->send();
     }

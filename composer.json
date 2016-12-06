@@ -13,6 +13,7 @@
         "illuminate/database": "~5.0",
         "alexgarrett/violin": "2.*",
         "ircmaxell/random-lib": "~1.1",
-        "mtdowling/jmespath.php": "~2.4"
+        "mtdowling/jmespath.php": "~2.4",
+        "monolog/monolog": "^1.21"
     }
 }
