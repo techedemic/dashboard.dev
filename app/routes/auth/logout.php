@@ -9,6 +9,6 @@ $app->get('/logout', function() use($app){
     }
 
     $app->flash('global','You have been logged out');
-    return $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('login'));
 })->name('logout');
  ?>

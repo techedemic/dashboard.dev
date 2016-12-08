@@ -41,7 +41,7 @@ $app->post('/register', $guest(),  function() use($app){
 
 
         $app->flash('global', "You have been registered successfully. Please check your email for additional instructions.");
-        return $app->response->redirect($app->urlFor('home'));
+        return $app->response->redirect($app->urlFor('login'));
     }
     $app->render('auth/register.php', [
         'errors' => $v->errors(),
