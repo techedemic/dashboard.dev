@@ -32,8 +32,8 @@ class Mailer
             //echo 'Message was not sent.';
             //echo 'Mailer error: ' . $this->mailer->ErrorInfo;
         } else {
-            echo 'Message has been sent.';
-            //$app->logger->debug("Mail has been sent");
+            //echo 'Message has been sent.';
+            $app->logger->debug("Mail has been sent");
         }
 
         $this->mailer->send();
