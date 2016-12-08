@@ -28,12 +28,12 @@ class Mailer
         call_user_func($callback, $message);
 
         if(!$this->mailer->Send()) {
-            $app->logger->error("Mail not sent",$this->mailer->ErrorInfo);
+            $this->app->logger->error("Mail not sent",$this->mailer->ErrorInfo);
             //echo 'Message was not sent.';
             //echo 'Mailer error: ' . $this->mailer->ErrorInfo;
         } else {
             //echo 'Message has been sent.';
-            $app->logger->debug("Mail has been sent");
+            $this->app->logger->debug("Mail has been sent");
         }
 
         $this->mailer->send();
