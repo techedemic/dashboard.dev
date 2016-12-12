@@ -97,6 +97,8 @@ $app->container->singleton('randomlib', function() use($app){
     return $factory->getMediumStrengthGenerator();
 });
 
+
+
 $view = $app->view();
 
 $view->parserOptions = [

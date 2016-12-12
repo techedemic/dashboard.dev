@@ -1,8 +1,8 @@
 <?php
 return[
         'app' => [
-            'url' => 'https://www.synththis.com',  /* No trailing slash ('/')*/
-            'subfolder' => "", /* in dev mode, the app might be in a subfolder of a general /var/www/html folder or similar. Remember the leading slash ('/')*/
+            'url' => 'http://dashboard.dev',  /* No trailing slash ('/')*/
+            'subfolder' => "/public", /* in dev mode, the app might be in a subfolder of a general /var/www/html folder or similar. Remember the leading slash ('/')*/
             'hash' => [
                 'algo' => PASSWORD_BCRYPT,
                 'cost' => 10

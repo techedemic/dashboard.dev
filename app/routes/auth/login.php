@@ -48,8 +48,11 @@ $app->post('/login', $guest(),function() use ($app) {
             }
 
             $app->flash('global', 'You are now signed in');
+            $app->logger->debug("You are now signed in as {$user->username} with email address {$user->email}");
             $app->response->redirect($app->urlFor('home'));
+
         } else {
+            $app->logger->debug("Could not log you in");
             $app->flash('global', 'Could not log you in');
             $app->response->redirect($app->urlFor('login'));
         }
