@@ -36,7 +36,7 @@ class Mailer
             $this->app->logger->debug("Mail has been sent");
         }
 
-        $this->mailer->send();
+        //$this->mailer->send();
     }
 }
 
