@@ -84,6 +84,24 @@ $app->get('/dashboard/info/:identifier',function($identifier) use ($app){
                     "group_by" => "region",
                     "sum" => "down_bwan",
                     "datasource" => "data.json"
+                ],[
+                    "id" => "6",
+                    "type" => "widget_counter",
+                    "title" => "Region: Wifi Users",
+                    "icon" => "fa-wifi",
+                    "color" => "green",
+                    "group_by" => "region",
+                    "sum" => "connections",
+                    "datasource" => "datawifi.json"
+                ],[
+                    "id" => "7",
+                    "type" => "widget_counter",
+                    "title" => "Region: Wifi Users",
+                    "icon" => "fa-wifi",
+                    "color" => "green",
+                    "group_by" => "ploc",
+                    "sum" => "connections",
+                    "datasource" => "datawifi.json"
                 ]
 
         );

@@ -1,40 +1,164 @@
 {
 	"data": [{
-		"ssid" : "",
-
-		"down_bwan_duration": "0",
-		"down_slan_duration": "0",
-		"down_swan_duration": "0",
-		"up_bwan_duration": "0",
-		"down_swan": "0",
-		"ploid": "SBSA0020",
-		"threshold_swan_util_duration_oh": "0",
-		"down_bwan": "0",
-		"view_group": "DC",
-		"region": "Africa.South Africa.Gauteng",
-		"up_bwan_duration_oh": "0",
-		"syslog_afn": "0",
-		"db_key": "1",
-		"threshold_slan_delay_duration": "0",
-		"threshold_slan_delay_duration_oh": "0",
-		"threshold_slan_delay": "0",
-		"threshold_swan_util_duration": "0",
-		"threshold_swan_util": "0",
-		"down_slan": "0",
-		"notes": "",
-		"syslog_sla": "0",
-		"syslog": "0",
-		"threshold_host": "2",
-		"threshold_host_duration_oh": "3872",
-		"up_bwan": "0",
-		"down_swan_duration_oh": "0",
-		"location": "Riverclub.RDC",
-		"down_slan_duration_oh": "0",
-		"threshold_host_duration": "9134",
-		"monitored": 2,
-		"syslog_config": "0",
-		"down_bwan_duration_oh": "0"
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "hschoeman",
+		"connections": 1
 	}, {
-
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "ddejongh",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "hpieters",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "rsmit",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "pagenbag",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "hmahlangu",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "lmyburgh",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "cfredericks",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "aclark",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "akotze",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "ghooper",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0001",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard South",
+		"user_id": "lneethling",
+		"connections": 1
+	},{
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0002",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway",
+		"user_id": "jprinsloo",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0002",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway",
+		"user_id": "fvandyk",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0002",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway",
+		"user_id": "ebiagio",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0002",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway",
+		"user_id": "jwort",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0002",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway",
+		"user_id": "jmathys",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0002",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway",
+		"user_id": "skloppers",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0003",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard North",
+		"user_id": "ghooper",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0003",
+		"region": "Africa.South Africa.WesternCape",
+		"ploc": "Barinors Vineyard North",
+		"user_id": "lneethling",
+		"connections": 1
+	},{
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0004",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway Old",
+		"user_id": "jprinsloo",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP2",
+		"ploid": "0004",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway Old",
+		"user_id": "fvandyk",
+		"connections": 1
+	}, {
+		"ssid" : "SintrexWifiAP5",
+		"ploid": "0004",
+		"region": "Africa.South Africa.Gauteng",
+		"ploc": "International Business Gateway Old",
+		"user_id": "ebiagio",
+		"connections": 1
 	}]
 }

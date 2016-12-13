@@ -73,7 +73,8 @@ function renderAll()
 function render_widget_counter(data,val)
 {
 
-    //var aLink = "<a class='btn btn-primary' data-toggle='collapse' href='#collapseExample' aria-expanded='false' aria-controls='collapseExample'>View Details </a>"
+
+    //Build up detailed table
     var tableHtml = "<table class='table table-condensed'><tr><th>Region</th><th>Count</th></tr>";
     for (key in data[0].data){
         {
@@ -82,6 +83,8 @@ function render_widget_counter(data,val)
         }
     }
     tableHtml += "</table>"
+
+    //Build up entire div (including counter)
     var dbHtml = "<div class='card'>"+
     "<div class='card-header' role='tab' id='headingOne"+ val.id +"'>"+
       "<h5 class='mb-0'>"+
