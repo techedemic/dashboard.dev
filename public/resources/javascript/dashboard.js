@@ -74,8 +74,15 @@ function render_widget_counter(data,val)
 {
 
     //var aLink = "<a class='btn btn-primary' data-toggle='collapse' href='#collapseExample' aria-expanded='false' aria-controls='collapseExample'>View Details </a>"
-
-    var tableHtml = "<div class='card'>"+
+    var tableHtml = "<table class='table table-condensed'><tr><th>Region</th><th>Count</th></tr>";
+    for (key in data[0].data){
+        {
+            tableHtml += "<tr><td>"+ key +"</td><td>" + data[0].data[key] + "</td></tr>"
+            console.log(key + " - " + data[0].data[key]);
+        }
+    }
+    tableHtml += "</table>"
+    var dbHtml = "<div class='card'>"+
     "<div class='card-header' role='tab' id='headingOne"+ val.id +"'>"+
       "<h5 class='mb-0'>"+
         "<a data-toggle='collapse' data-parent='#accordion' href='#collapse"+ val.id +"' aria-expanded='false' aria-controls='collapse"+ val.id +"'>"+
@@ -87,17 +94,21 @@ function render_widget_counter(data,val)
     "</div>"+
     "<div id='collapse"+ val.id +"' class='collapse' role='tabpanel' aria-labelledby='headingOne"+ val.id +"'>"+
      " <div class='card-block btn-expand'>"+
-    "    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, "+
-    "synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."+
+        tableHtml+
      " </div>"+
     "</div>"+
   "</div>";
 
 
+    //console.log(JSON.stringify(data));
+    // $.each(data[0], function(i, val){
+    //     //console.log(val);
+    //     //console.log(val[0]);
+    // });
 
 
     var panelHtml = "<div class='col-lg-3 col-md-6'><div class='panel panel-" + val.color + "'><div class='panel-heading'>" +
                 "<div class='row'><div class='col-xs-3'><i class='fa " + val.icon + " fa-5x'></i></div><div class='col-xs-9 text-right'>" +
-                "<div class='text-huge'>" + data[0].total + "</div><div>" + val.title + "</div></div></div></div>" + tableHtml + "</div>";
+                "<div class='text-huge'>" + data[0].total + "</div><div>" + val.title + "</div></div></div></div>" + dbHtml + "</div>";
     return panelHtml;
 }
