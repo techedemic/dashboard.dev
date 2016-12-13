@@ -96,8 +96,8 @@ $app->get('/dashboard/info/:identifier',function($identifier) use ($app){
                 ],[
                     "id" => "7",
                     "type" => "widget_counter",
-                    "title" => "Region: Wifi Users",
-                    "icon" => "fa-wifi",
+                    "title" => "PLOC: Wifi Users",
+                    "icon" => "fa-building-o",
                     "color" => "green",
                     "group_by" => "ploc",
                     "sum" => "connections",
