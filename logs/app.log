@@ -2,3 +2,5 @@
 [2016-12-12 08:09:52] my_logger.DEBUG: You are now signed in [] []
 [2016-12-12 08:11:24] my_logger.DEBUG: You are now signed in as hendri with email address hendri.schoeman@sintrex.com [] []
 [2016-12-12 08:12:14] my_logger.DEBUG: You have been logged out [] []
+[2016-12-14 07:54:14] my_logger.DEBUG: You are now signed in as hendri with email address hendri.schoeman@sintrex.com [] []
+[2016-12-14 07:56:15] my_logger.DEBUG: You are now signed in as hendri with email address hendri.schoeman@sintrex.com [] []

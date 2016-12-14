@@ -3,6 +3,10 @@ $app->get('/dashboard/view',$authenticated(),function() use ($app){
     $app->render('dashboard/viewer.php');
 })->name('dashboard.view');
 
+$app->get('/dashboard/view2',$authenticated(),function() use ($app){
+    $app->render('dashboard/viewer2.php');
+})->name('dashboard.view2');
+
 $app->get('/dashboard/widget_counter', $authenticated(),function() use ($app){
     $request = $app->request();
 

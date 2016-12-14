@@ -15,7 +15,16 @@
      <ul class="nav navbar-nav navbar-right">
        <li><a href="{{ urlFor('home') }}">Home</a></li>
        {% if auth %}
-       <li><a href="{{ urlFor('dashboard.view') }}">Dashboard</a></li>
+
+       <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboard <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="{{ urlFor('dashboard.view') }}">Dashboard 1</a></li>
+             <li><a href="{{ urlFor('dashboard.view2') }}">Dashboard 2</a></li>
+           </ul>
+      </li>
+
+       <!--<li><a href="{{ urlFor('dashboard.view') }}">Dashboard</a></li>-->
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
           <ul class="dropdown-menu">
